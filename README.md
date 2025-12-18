@@ -1,16 +1,29 @@
-# React + Vite
+# Create the project
+npm create vite@latest my-portfolio -- --template react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Move into the folder
+cd my-portfolio
 
-Currently, two official plugins are available:
+# Install 3D and Animation dependencies
+npm install three @types/three @react-three/fiber @react-three/drei framer-motion lucide-react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Install Tailwind CSS
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
 
-## React Compiler
+# Create Tailwind config
+npx tailwindcss init -p
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Deployment
+npm install gh-pages --save-dev
+git init
+git add .
+git commit -m "initial commit"
+git branch -M master
+git push origin master --force
+git remote add origin https://github.com/smshivam44atgit/my-portfolio.git
+git config user.name "Anurag Mishra"
+git config user.email "smshivam44@gmail.com"
+git remote set-url origin https://smshivam44atgit@github.com/smshivam44atgit/my-portfolio.git
+create a PAT token(classic) in github and enter when prompted
+npm run deploy
